@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.navBarContainer {
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 64px;
+  height: 80px;
+  align-items: center;
+  background-color: #00A896;
+  font-family: "Inter", sans-serif;
+}
+.navBarContainer .searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navBarContainer .searchInput .locationIcon, .navBarContainer .searchInput .searchIcon {
+  padding: 12px;
+  background-color: white;
+}
+.navBarContainer .searchInput input {
+  padding: 12.5px;
+  border: none;
+  width: 350px;
+  outline: none;
+}
+.navBarContainer .loginAndSignup {
+  display: flex;
+}
+.navBarContainer .loginAndSignup .logButton {
+  margin-right: 5px;
+  padding: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+.navBarContainer .loginAndSignup .logButton:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+.navBarContainer .loginAndSignup .logButton .bagIcon {
+  margin-left: 12px;
+  font-size: large;
+}
+.navBarContainer .loginAndSignup .logButton .logIcon {
+  margin-left: 12px;
+  font-size: large;
+}
+.navBarContainer .loginAndSignup .bagButton {
+  margin-right: 5px;
+  padding: 10px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+.navBarContainer .loginAndSignup .bagButton:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+.navBarContainer .loginAndSignup .bagButton .bagIcon {
+  font-size: large;
+}
+.navBarContainer .loginAndSignup .bagButton .logIcon {
+  margin-left: 12px;
+  font-size: large;
+}
+@media screen and (max-width: 800px) {
+  .navBarContainer .searchInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navBarContainer .searchInput .locationIcon, .navBarContainer .searchInput .searchIcon {
+    padding: 12px;
+    background-color: white;
+  }
+  .navBarContainer .searchInput input {
+    padding: 12.5px;
+    border: none;
+    width: 150px;
+    outline: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .navBarContainer {
+    background-color: rgb(225, 20, 20);
+  }
+}/*# sourceMappingURL=Navbar.css.map */

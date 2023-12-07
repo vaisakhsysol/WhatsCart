@@ -1,0 +1,42 @@
+@import '../variables';
+
+
+.categoriesContainerMain{
+    padding: 0 32px;
+    .categoriesContainer{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        .CategoryListItems{
+            border: 0.5px solid rgb(194, 194, 194);
+            padding: 30px;
+            max-width: 100px;
+            border-radius: 5px;
+
+
+            .categoryLogo{
+                background-color: $primaryColor;
+                height: 45px;
+                width: 45px;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $secondaryColor;
+            }
+
+            p{
+                font-size: map-get($fontSize, small );
+            }
+
+            &:hover{
+                cursor: pointer;
+                transition: all 0.2s ease-in;
+                box-shadow: 5px 5px $primaryColor inset;
+                
+            }
+        }
+       
+    }
+}

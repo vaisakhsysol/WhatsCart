@@ -1,0 +1,27 @@
+@import '../variables';
+
+
+
+.carouselContainer{
+    padding: 0 64px;
+
+    h5{
+        margin:  0 12px;
+        margin-top: 12px;
+        color: $textColor;
+    }
+}
+.owlContainer{
+    margin-top: 12px;
+    
+    .item{
+        gap: 12px;
+        margin-left: 12px;
+    }
+
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
+
+}
