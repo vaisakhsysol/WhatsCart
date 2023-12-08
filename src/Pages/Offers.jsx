@@ -1,7 +1,7 @@
 
 import React from "react"
 
-let Offers = (props)=>{
+let Offers = ()=>{
     return(
         <h1>Offers Page</h1>
     )

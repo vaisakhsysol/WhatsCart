@@ -3,6 +3,7 @@ import './Navbar.css'
 import { MdOutlineMyLocation,MdSearch  } from "react-icons/md";
 import { LuShoppingBag } from "react-icons/lu";
 import { BiLogInCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 let Navbar=()=>{
@@ -21,9 +22,12 @@ return(
             </div>
 
             <div className="loginAndSignup">
-                <button className="bagButton">
-                    <LuShoppingBag className="bagIcon"/>
-                </button>
+                <Link to={`/cart/`}>
+                    <button className="bagButton">
+                        <LuShoppingBag className="bagIcon"/>
+                    </button>
+                </Link>
+                
                 <button className="logButton">LOGIN
                     <BiLogInCircle className="logIcon" />
                 </button>

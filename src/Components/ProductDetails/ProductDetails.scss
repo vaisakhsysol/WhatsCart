@@ -1,0 +1,57 @@
+@import '../variables';
+
+.productDetailsContainer{
+    margin-top: 128px;
+    padding: 0 128px;
+
+    .productImageAndDetailsContainer{
+        display: flex;
+        width: 100%;
+
+        .productImageandButton{
+            width: 50%;
+            min-width: 300px;
+
+            img{
+                width: 100%;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    .productDetails{
+        max-width: 50%;
+        margin-left: 24px;
+
+        .productName{
+            font-size: map-get($fontSize, xxLarge );
+            font-weight: 600;
+            color: $textColor;
+        }
+
+        .productDesc{
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            margin-top: -24px;
+        }
+
+        .productPrice{
+            font-size: map-get($fontSize, xLarge );
+        }
+
+        .deliveryDetails{
+            display: flex;
+            align-items: center;
+
+            .inputContainer{
+                margin-left: 48px;
+            }
+            
+            input{
+                width: 250px;
+                
+            }
+        }
+    }
+}

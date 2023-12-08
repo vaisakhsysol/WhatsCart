@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.productDetailsContainer {
+  margin-top: 128px;
+  padding: 0 128px;
+}
+.productDetailsContainer .productImageAndDetailsContainer {
+  display: flex;
+  width: 100%;
+}
+.productDetailsContainer .productImageAndDetailsContainer .productImageandButton {
+  width: 50%;
+  min-width: 300px;
+}
+.productDetailsContainer .productImageAndDetailsContainer .productImageandButton img {
+  width: 100%;
+  border: 1px solid black;
+}
+.productDetailsContainer .productDetails {
+  max-width: 50%;
+  margin-left: 24px;
+}
+.productDetailsContainer .productDetails .productName {
+  font-size: 42px;
+  font-weight: 600;
+  color: #313131;
+}
+.productDetailsContainer .productDetails .productDesc {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin-top: -24px;
+}
+.productDetailsContainer .productDetails .productPrice {
+  font-size: 35px;
+}
+.productDetailsContainer .productDetails .deliveryDetails {
+  display: flex;
+  align-items: center;
+}
+.productDetailsContainer .productDetails .deliveryDetails .inputContainer {
+  margin-left: 48px;
+}
+.productDetailsContainer .productDetails .deliveryDetails input {
+  width: 250px;
+}/*# sourceMappingURL=ProductDetails.css.map */

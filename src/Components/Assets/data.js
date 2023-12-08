@@ -9,12 +9,18 @@ import productSeven  from '../Assets/Images/lenovo_legion_5.webp'
 
 
 
-
-
 let data = [
     {
         id:1,
         ProductName: "Lenovo Legion 3000",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productFive,
         price: 25000,
         discountPrice : 55000,
@@ -24,6 +30,14 @@ let data = [
     {
         id:2,
         ProductName: "Lenovo Legion MX 3000",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productFour,
         price: 25000,
         discountPrice : 55000,
@@ -33,6 +47,14 @@ let data = [
     {
         id:3,
         ProductName: "Acer Aspire m3x30",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productOne,
         price: 50000,
         discountPrice : 155000,
@@ -42,6 +64,14 @@ let data = [
     {
         id:4,
         ProductName: "Asus Tuf F250",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productThree,
         price: 50000,
         discountPrice : 155000,
@@ -51,6 +81,14 @@ let data = [
     {
         id:5,
         ProductName: "Spectre x360",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productSeven,
         price: 50000,
         discountPrice : 155000,
@@ -60,6 +98,14 @@ let data = [
     {
         id:6,
         ProductName: "ThinkPad X1 Carbon",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productSix,
         price: 70000,
         discountPrice : 150000,
@@ -69,6 +115,14 @@ let data = [
     {
         id:7,
         ProductName: "Lenovo Ancor X",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productTwo,
         price: 70000,
         discountPrice : 150000,
@@ -76,8 +130,16 @@ let data = [
         
     },
     {
-        id:1,
+        id:8,
         ProductName: " HP Pavillion 3",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productFive,
         price: 25000,
         discountPrice : 55000,
@@ -85,8 +147,16 @@ let data = [
 
     },
     {
-        id:2,
+        id:9,
         ProductName: "Nostromo G 300",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productFour,
         price: 25000,
         discountPrice : 55000,
@@ -94,8 +164,16 @@ let data = [
         
     },
     {
-        id:3,
+        id:10,
         ProductName: "MonenClatrue LG350",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productOne,
         price: 50000,
         discountPrice : 155000,
@@ -103,8 +181,16 @@ let data = [
         
     },
     {
-        id:4,
+        id:11,
         ProductName: "Maximux Legion 3000",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productThree,
         price: 50000,
         discountPrice : 155000,
@@ -112,8 +198,16 @@ let data = [
         
     },
     {
-        id:5,
+        id:12,
         ProductName: "Avita Pure 500L",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productSeven,
         price: 50000,
         discountPrice : 155000,
@@ -121,8 +215,16 @@ let data = [
         
     },
     {
-        id:6,
+        id:13,
         ProductName: "Lenovo Jesko X",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productSix,
         price: 70000,
         discountPrice : 150000,
@@ -130,8 +232,16 @@ let data = [
         
     },
     {
-        id:7,
+        id:14,
         ProductName: "Zamil Pro Max",
+        specifications:[
+            { processor: "i7 3700k" },
+            { gpu: "RTX 3050" },
+            { ram: "16GB RAM" },
+            { storage: "512GB SSD" },
+            { display: " 15.6 IPS LCD" },
+            { Power: " 120W Adapter" }  
+          ],
         img:productTwo,
         price: 70000,
         discountPrice : 150000,

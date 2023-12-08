@@ -11,7 +11,8 @@ let HomeaddAndSub=()=>{
         setCartCount(prevCount => prevCount - 1);
         
         if (cartCount < 2) {
-            alert("Cart and is empty")
+            alert("This Product has been Removed")
+            
         }
     };
 

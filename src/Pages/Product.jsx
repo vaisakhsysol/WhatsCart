@@ -1,9 +1,10 @@
 
 import React from "react"
+import ProductDetail from "../Components/ProductDetails/ProductDetails"
 
 let Product = ()=>{
     return(
-        <h1>Product Page</h1>
+        <ProductDetail/>
     )
 }
 

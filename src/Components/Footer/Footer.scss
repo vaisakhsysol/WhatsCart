@@ -28,6 +28,10 @@
         background-color: $secondaryColor;
         font-weight: 600;
         letter-spacing: 0.5px;
+
+       &:hover{
+        cursor: pointer;
+       }
     }
 }
 @media screen and (max-width:425px) {

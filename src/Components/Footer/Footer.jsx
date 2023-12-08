@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 let Footer =()=>{
@@ -10,7 +11,9 @@ let Footer =()=>{
                 </div>
 
                 <div>
-                    <button className='footerCheckoutBtn'> Checkout </button>
+                    <Link to={`/cart/`}>
+                        <button className='footerCheckoutBtn'> Checkout </button>
+                    </Link>
                 </div>
             </div>
         </footer>

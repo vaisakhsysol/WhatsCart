@@ -4,6 +4,7 @@ import { IoCartOutline } from "react-icons/io5";
 import data from '../Assets/data';
 import { useState } from 'react';
 import HomeaddAndSub from '../HomeAddandSub/HomeAddandSub';
+import { Link } from 'react-router-dom';
 
 let ProductTile=()=>{
 
@@ -19,7 +20,7 @@ let ProductTile=()=>{
 
         setButtonTexts(newButtonTexts);
         setCartIcons(newCartIcons);
-        // You can add other functionality here on button click if needed
+        
     };
 
     return(
@@ -46,10 +47,16 @@ let ProductTile=()=>{
 
                         data.map((product,i)=>{
                             return(
+                                
+                                
+                                
                                 <div className="card" key={i}>
-                            <div>
-                                <img src={product.img} alt="" />
-                            </div>
+                            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+                                <div>
+                                    <img src={product.img} alt="" />
+                                </div>
+                            </Link>
+                            
                             <div>
                                 <h3> {product.ProductName}</h3>
                             </div>
@@ -64,6 +71,7 @@ let ProductTile=()=>{
                                 {buttonTexts[i]} {cartIcons[i] && <IoCartOutline className='cartIcon' />}
                             </button>
                         </div>
+                        
                             )
                         
                         })
