@@ -6,7 +6,7 @@ let Footer =()=>{
             <div className="footerContainer">
                 <div className='totalsContainer'>
                     <p>Your Total</p>
-                    <h2>Rs. 32,000</h2>
+                    <h2>Rs. 32,00,000</h2>
                 </div>
 
                 <div>

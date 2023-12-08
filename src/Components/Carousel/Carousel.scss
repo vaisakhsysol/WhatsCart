@@ -12,6 +12,7 @@
         color: $textColor;
     }
 }
+
 .owlContainer{
     margin-top: 12px;
     
@@ -25,4 +26,10 @@
         object-fit: cover;
     }
 
+}
+
+@media screen and (max-width:425px) {
+    .carouselContainer{
+        padding: 0 12px;
+    }
 }

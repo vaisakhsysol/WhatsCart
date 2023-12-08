@@ -25,6 +25,9 @@ let Carousel=()=>{
             },
             500 : {
                 items : 1,
+            },
+            300:{
+                items : 1,
             }
         }
     }

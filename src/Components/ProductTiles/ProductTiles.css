@@ -108,4 +108,10 @@
 .productTileGridContainer .cards p {
   margin-top: -20px;
   font-size: 13px;
+}
+
+@media screen and (max-width: 425px) {
+  .productTileGridContainer {
+    padding: 0 16px;
+  }
 }/*# sourceMappingURL=ProductTiles.css.map */

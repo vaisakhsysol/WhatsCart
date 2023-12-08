@@ -28,7 +28,7 @@
 .navBarContainer .searchInput input {
   padding: 12.5px;
   border: none;
-  width: 350px;
+  width: 250px;
   outline: none;
 }
 .navBarContainer .loginAndSignup {
@@ -79,7 +79,10 @@
   margin-left: 12px;
   font-size: large;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 425px) {
+  .navBarContainer {
+    padding: 0 4px;
+  }
   .navBarContainer .searchInput {
     display: flex;
     justify-content: center;
@@ -92,12 +95,7 @@
   .navBarContainer .searchInput input {
     padding: 12.5px;
     border: none;
-    width: 150px;
+    width: 50px;
     outline: none;
-  }
-}
-@media screen and (max-width: 425px) {
-  .navBarContainer {
-    background-color: rgb(225, 20, 20);
   }
 }/*# sourceMappingURL=Navbar.css.map */
