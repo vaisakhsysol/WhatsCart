@@ -3,6 +3,7 @@
 .productTileGridContainer{
     padding: 0 64px;
     margin-top: 64px;
+    margin-bottom: 128px;
 
     .productTileHead{
         display: flex;
@@ -83,6 +84,7 @@
         .addToCartBtn{
             width: 100%;
             padding: 8px;
+        
             height: 40px;
             border: none;
             background-color: $primaryColor;

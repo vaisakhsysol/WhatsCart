@@ -1,7 +1,18 @@
+import './Footer.css'
+
 let Footer =()=>{
     return(
-        <footer>
-            <h1>Footer Here</h1>
+        <footer className='footerMainContainer'>
+            <div className="footerContainer">
+                <div className='totalsContainer'>
+                    <p>Your Total</p>
+                    <h2>Rs. 32,000</h2>
+                </div>
+
+                <div>
+                    <button className='footerCheckoutBtn'> Checkout </button>
+                </div>
+            </div>
         </footer>
     )
 }

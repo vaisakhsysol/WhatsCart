@@ -8,7 +8,7 @@ import { BiLogInCircle } from "react-icons/bi";
 let Navbar=()=>{
 
 return(
-    <section>
+    <section className="navBarSection">
         <nav className="navBarContainer">
             <div>
                 <p> LOGO </p>

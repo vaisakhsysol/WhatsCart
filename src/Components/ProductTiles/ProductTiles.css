@@ -2,6 +2,7 @@
 .productTileGridContainer {
   padding: 0 64px;
   margin-top: 64px;
+  margin-bottom: 128px;
 }
 .productTileGridContainer .productTileHead {
   display: flex;

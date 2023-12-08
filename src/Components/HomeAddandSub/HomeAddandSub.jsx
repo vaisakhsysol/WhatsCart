@@ -5,10 +5,14 @@ import { LuMinus , LuPlus } from "react-icons/lu";
 
 let HomeaddAndSub=()=>{
 
-    let[cartCount , setCartCount] = useState(0)
+    let[cartCount , setCartCount] = useState(1)
     
     let handleCartClickMinus = () => {
         setCartCount(prevCount => prevCount - 1);
+        
+        if (cartCount < 2) {
+            alert("Cart and is empty")
+        }
     };
 
     let handleCartClickPlus = () => {

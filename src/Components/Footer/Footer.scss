@@ -1,2 +1,32 @@
 @import '../variables';
 
+
+.footerMainContainer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    
+}
+
+.footerContainer{
+    background-color: $primaryColor;
+    padding: 4px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .totalsContainer{
+        h2{
+            margin-top: -12px;
+        }
+    }
+
+    .footerCheckoutBtn{
+        padding: 15px;
+        width: 150px;
+        border: none;
+        background-color: $secondaryColor;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+}

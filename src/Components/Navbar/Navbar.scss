@@ -1,5 +1,12 @@
 @import '../variables';
 
+
+.navBarSection{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
 .navBarContainer{
     letter-spacing: 0.5px;
     display: flex;
@@ -9,6 +16,7 @@
     align-items: center;
     background-color: $primaryColor;
     font-family: 'Inter', sans-serif;
+   
 
     .searchInput{
         display: flex;
