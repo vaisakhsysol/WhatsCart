@@ -35,10 +35,10 @@ const ProductDetail = () => {
                     </div>
 
                     <div className='deliveryDetails'>
-                        <p>Delivery </p>
+                        <p>Delivery :</p>
                         <div className='inputContainer'>
-                                <IoLocationSharp />
-                                <input type="text" name="" id="" />
+                                <IoLocationSharp className='locationIcon'/>
+                                <input type="text" name="" id="" placeholder='enter delivery pincode'/>
                         </div>
                     </div>
                 </div>

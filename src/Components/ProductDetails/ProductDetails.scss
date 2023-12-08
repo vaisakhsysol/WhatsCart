@@ -46,10 +46,20 @@
 
             .inputContainer{
                 margin-left: 48px;
+                display: flex;
+                align-items: center;
+
+                .locationIcon{
+                    padding: 10px;
+                }
             }
             
-            input{
+            input[type=text]{
                 width: 250px;
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid $textColor;
+                outline: none;
                 
             }
         }

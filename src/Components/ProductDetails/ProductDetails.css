@@ -39,7 +39,16 @@
 }
 .productDetailsContainer .productDetails .deliveryDetails .inputContainer {
   margin-left: 48px;
+  display: flex;
+  align-items: center;
 }
-.productDetailsContainer .productDetails .deliveryDetails input {
+.productDetailsContainer .productDetails .deliveryDetails .inputContainer .locationIcon {
+  padding: 10px;
+}
+.productDetailsContainer .productDetails .deliveryDetails input[type=text] {
   width: 250px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #313131;
+  outline: none;
 }/*# sourceMappingURL=ProductDetails.css.map */
