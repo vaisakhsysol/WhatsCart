@@ -4,7 +4,9 @@ import { IoCartOutline } from "react-icons/io5";
 import data from '../Assets/data';
 import { useState } from 'react';
 import HomeaddAndSub from '../HomeAddandSub/HomeAddandSub';
+
 import { Link } from 'react-router-dom';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 let ProductTile=()=>{
 
@@ -67,9 +69,11 @@ let ProductTile=()=>{
                                 </p>
                             </div>
                             
-                            <button className='addToCartBtn' onClick={() => handleButtonClick(i)}>
-                                {buttonTexts[i]} {cartIcons[i] && <IoCartOutline className='cartIcon' />}
-                            </button>
+                            <AddToCartButton
+                                    buttonText={buttonTexts[i]}
+                                    cartIcon={cartIcons[i]}
+                                    onClick={() => handleButtonClick(i)}
+                            />
                         </div>
                         
                             )
