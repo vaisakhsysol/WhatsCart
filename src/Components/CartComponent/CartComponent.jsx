@@ -8,11 +8,8 @@ import { FiMinus , FiPlus } from "react-icons/fi";
 let CartComponent=()=>{
     return(
         <div className='cartComponentContainer'>
-           
-
             <div className='cartContainer'>
             <h2> YOUR CART </h2>
-
                 {Array(4).fill(true).map((item,index)=>
                     <div className='cartProduct'>
                     <div>
@@ -30,7 +27,6 @@ let CartComponent=()=>{
                             <p className='productPrice'>
                                 Rs.68,6862
                             </p>
-
                             <div className='cartIncAndDecContainer'>
                                 <button className='cartDecrementBtn'>
                                     <FiMinus className='cartDecrementIcon'/>
