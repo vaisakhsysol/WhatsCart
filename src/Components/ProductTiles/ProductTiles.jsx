@@ -1,91 +1,85 @@
-import './ProductTiles.css'
-import { IoFilter } from "react-icons/io5";
-import { IoCartOutline } from "react-icons/io5";
+import React, { useState } from 'react';
+import './ProductTiles.css';
 import data from '../Assets/data';
-import { useState } from 'react';
-import HomeaddAndSub from '../HomeAddandSub/HomeAddandSub';
-
 import { Link } from 'react-router-dom';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import HomeaddAndSub from '../HomeAddandSub/HomeAddandSub';
 
-let ProductTile=()=>{
+const ProductTile = () => {
+  const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Cart'));
+  const [cartIcons, setCartIcons] = useState(Array(data.length).fill(true));
+  const [counts, setCounts] = useState(Array(data.length).fill(0));
 
-    const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Cart'));
-    const [cartIcons, setCartIcons] = useState(Array(data.length).fill(true));
+  const handleButtonClick = (index) => {
+    const newButtonTexts = [...buttonTexts];
+    const newCartIcons = [...cartIcons];
+    const newCounts = [...counts];
 
-    const handleButtonClick = (index) => {
-        const newButtonTexts = [...buttonTexts];
-        const newCartIcons = [...cartIcons];
+    newButtonTexts[index] = <HomeaddAndSub onCountZero={() => handleCountZero(index)} />;
+    newCartIcons[index] = false;
 
-        newButtonTexts[index] = <HomeaddAndSub />;
-        newCartIcons[index] = false;
+    setButtonTexts(newButtonTexts);
+    setCartIcons(newCartIcons);
+    setCounts(newCounts);
+  };
 
-        setButtonTexts(newButtonTexts);
-        setCartIcons(newCartIcons);
-        
-    };
+  const handleCountZero = (index) => {
+    const newButtonTexts = [...buttonTexts];
+    const newCartIcons = [...cartIcons];
+    const newCounts = [...counts];
 
-    return(
-        <div className='productTileGridContainer'>
-            <div className='productTileHead'> 
-                <h3> Used Laptops & Desktops </h3>
-                <div>
-                    <div class="dropdown">
-                        <button class="dropbtn"> <IoFilter /> <p>Filter</p></button>
-                        <div class="dropdown-content">
-                                <a href="#">Low to High</a>
-                                <a href="#">High to Low</a>
-                                <a href="#">Most Bought</a>
-                        </div>
-                    </div>
-                </div>
+    newButtonTexts[index] = 'Add to Cart';
+    newCartIcons[index] = true;
+    newCounts[index] = 0;
 
-                
-            </div>
-           
-            <div>
-                <div className="cards">
-                    {
+    setButtonTexts(newButtonTexts);
+    setCartIcons(newCartIcons);
+    setCounts(newCounts);
+  };
 
-                        data.map((product,i)=>{
-                            return(
-                                
-                                
-                                
-                                <div className="card" key={i}>
-                            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
-                                <div>
-                                    <img src={product.img} alt="" />
-                                </div>
-                            </Link>
-                            
-                            <div>
-                                <h3> {product.ProductName}</h3>
-                            </div>
-                            <div>
-                                <h4>Rs. {product.price}</h4>
-                                <p> 
-                                    <s>Rs. {product.discountPrice}</s>
-                                </p>
-                            </div>
-                            
-                            <AddToCartButton
-                                    buttonText={buttonTexts[i]}
-                                    cartIcon={cartIcons[i]}
-                                    onClick={() => handleButtonClick(i)}
-                            />
-                        </div>
-                        
-                            )
-                        
-                        })
-                        
-                    }
-                </div>     
-            </div>
-
+  return (
+    <div className='productTileGridContainer'>
+      <div className='productTileHead'>
+        <h3>Used Laptops & Desktops</h3>
+        <div>
+          <div className="dropdown">
+            {/* Dropdown content */}
+          </div>
         </div>
-    )
-}
+      </div>
+      <div>
+        <div className="cards">
+          {data.map((product, i) => (
+            <div className="card" key={i}>
+              <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+                <div>
+                  <img src={product.img} alt="" />
+                </div>
+              </Link>
+              <div>
+                <h3>{product.ProductName}</h3>
+              </div>
+              <div>
+                <h4>Rs. {product.price}</h4>
+                <p>
+                  <s>Rs. {product.discountPrice}</s>
+                </p>
+              </div>
+              {counts[i] === 0 ? (
+                <AddToCartButton
+                  buttonText={buttonTexts[i]}
+                  cartIcon={cartIcons[i]}
+                  onClick={() => handleButtonClick(i)}
+                />
+              ) : (
+                buttonTexts[i] // Render the HomeaddAndSub component stored in buttonTexts
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default ProductTile
+export default ProductTile;
