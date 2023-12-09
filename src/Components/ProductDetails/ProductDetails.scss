@@ -69,8 +69,14 @@
             margin-top: -24px;
         }
 
+        .productPriceContainer{
+            display: flex;
+            
+        }
+
         .productPrice{
             font-size: map-get($fontSize, xLarge );
+            margin-right: 32px;
         }
 
         .deliveryDetails{

@@ -6,7 +6,7 @@ import { MdOutlineBolt , MdOutlineShoppingCart } from "react-icons/md";
 
 
 import data from '../Assets/data';
-import Specifications from '../Specifications/Specifications';
+
 
 const ProductDetail = () => {
     const { id } = useParams(); 
@@ -38,9 +38,16 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className='productDetails'>
+
+                    <i><p>{product.category}</p></i>
+
                     <p className='productName'>{product.ProductName}</p>
                     <p className='productDesc'>{product.description}</p>
-                    <p className="productPrice">Rs.{product.price}/-</p>
+                    <div className='productPriceContainer'>
+                        <p className="productPrice">Rs.{product.price}/-</p>
+                        <p className="productPrice"><s>Rs.{product.discountPrice}/-</s></p>
+                    </div>
+                    
 
                     <div>
                         <p>Color : </p>

@@ -1,9 +1,10 @@
 
 import React from "react"
+import CartComponent from "../Components/CartComponent/CartComponent"
 
 let Cart = ()=>{
     return(
-        <h1>Cart Page Is Here</h1>
+        <CartComponent/>
     )
 }
 

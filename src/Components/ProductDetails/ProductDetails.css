@@ -56,8 +56,12 @@
   line-height: 20px;
   margin-top: -24px;
 }
+.productDetailsContainer .productDetails .productPriceContainer {
+  display: flex;
+}
 .productDetailsContainer .productDetails .productPrice {
   font-size: 35px;
+  margin-right: 32px;
 }
 .productDetailsContainer .productDetails .deliveryDetails {
   display: flex;
