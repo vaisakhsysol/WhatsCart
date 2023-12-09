@@ -1,42 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import './HomeAddandSub.css'
-import { LuMinus , LuPlus } from "react-icons/lu";
+import './HomeAddandSub.css';
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
+const HomeAddandSub = ({ onCountZero, onCountChange }) => {
+  const [cartCount, setCartCount] = useState(1);
 
-let HomeaddAndSub=( {onCountZero } )=>{
+  useEffect(() => {
+    if (cartCount === 0) {
+      onCountZero();
+    } else {
+      onCountChange(cartCount);
+    }
+  }, [cartCount, onCountChange, onCountZero]);
 
-    let[cartCount , setCartCount] = useState(1)
-    
-    useEffect(() => {
-        if (cartCount === 0) {
-          onCountZero(); // Notify parent component when count reaches zero
-        }
-      }, [cartCount, onCountZero]);
-    
-      let handleCartClickMinus = () => {
-        setCartCount((prevCount) => prevCount - 1);
-      };
-    
-      let handleCartClickPlus = () => {
-        setCartCount((prevCount) => prevCount + 1);
-      };
+  const handleCartClickMinus = () => {
+    setCartCount((prevCount) => prevCount > 0 ? prevCount - 1 : 0);
+  };
 
-    // let handleCartClickMinus = () => {
-    //     setCartCount(prevCount => prevCount - 1);
-        
-    // };
+  const handleCartClickPlus = () => {
+    setCartCount((prevCount) => prevCount + 1);
+  };
 
-    // let handleCartClickPlus = () => {
-    //     setCartCount(prevCount => prevCount + 1);
-    // };
+  return (
+    <div className='homeAddandSubContainer'>
+      <button onClick={handleCartClickMinus}>
+        <AiOutlineMinus />
+      </button>
+      <button className='homeAddsubItems'>{cartCount}</button>
+      <button onClick={handleCartClickPlus}>
+        <AiOutlinePlus />
+      </button>
+    </div>
+  );
+};
 
-    return (
-        <div className='homeAddandSubContainer'>
-            <button onClick={handleCartClickMinus}> <LuMinus/> </button>
-            <button className='homeAddsubItems'> {cartCount} </button>
-            <button onClick={handleCartClickPlus}> <LuPlus/> </button>
-        </div>
-    )
-}
-
-export default HomeaddAndSub
+export default HomeAddandSub;

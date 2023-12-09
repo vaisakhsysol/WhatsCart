@@ -3,19 +3,26 @@ import './ProductTiles.css';
 import data from '../Assets/data';
 import { Link } from 'react-router-dom';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
-import HomeaddAndSub from '../HomeAddandSub/HomeAddandSub';
+import HomeAddandSub from '../HomeAddandSub/HomeAddandSub';
+import Footer from '../Footer/Footer'; // Import the Footer component
 
 const ProductTile = () => {
   const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Cart'));
   const [cartIcons, setCartIcons] = useState(Array(data.length).fill(true));
   const [counts, setCounts] = useState(Array(data.length).fill(0));
+  const [totalPrice, setTotalPrice] = useState(0); // State to track total price
 
-  const handleButtonClick = (index) => {
+  const handleButtonClick = (index, price) => {
     const newButtonTexts = [...buttonTexts];
     const newCartIcons = [...cartIcons];
     const newCounts = [...counts];
 
-    newButtonTexts[index] = <HomeaddAndSub onCountZero={() => handleCountZero(index)} />;
+    newButtonTexts[index] = (
+      <HomeAddandSub
+        onCountZero={() => handleCountZero(index)}
+        onCountChange={(count) => handleCountChange(count, price)}
+      />
+    );
     newCartIcons[index] = false;
 
     setButtonTexts(newButtonTexts);
@@ -35,6 +42,11 @@ const ProductTile = () => {
     setButtonTexts(newButtonTexts);
     setCartIcons(newCartIcons);
     setCounts(newCounts);
+  };
+
+  const handleCountChange = (count, price) => {
+    const newTotalPrice = totalPrice + count * price;
+    setTotalPrice(newTotalPrice);
   };
 
   return (
@@ -69,7 +81,7 @@ const ProductTile = () => {
                 <AddToCartButton
                   buttonText={buttonTexts[i]}
                   cartIcon={cartIcons[i]}
-                  onClick={() => handleButtonClick(i)}
+                  onClick={() => handleButtonClick(i, product.price)} // Pass product price to handleButtonClick
                 />
               ) : (
                 buttonTexts[i] // Render the HomeaddAndSub component stored in buttonTexts
@@ -78,6 +90,7 @@ const ProductTile = () => {
           ))}
         </div>
       </div>
+      <Footer totalPrice={totalPrice} /> {/* Pass totalPrice to Footer */}
     </div>
   );
 };

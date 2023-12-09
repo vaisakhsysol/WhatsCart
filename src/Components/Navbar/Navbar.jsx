@@ -24,6 +24,7 @@ return(
             <div className="loginAndSignup">
                 <Link to={`/cart/`}>
                     <button className="bagButton">
+                        
                         <LuShoppingBag className="bagIcon"/>
                     </button>
                 </Link>
@@ -33,7 +34,7 @@ return(
                 </button>
             </div>
         </nav>
-        
+         
     </section>
     
 )}

@@ -2,8 +2,11 @@ import '../ProductDetails/ProductDetails.css'
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { IoLocationSharp } from "react-icons/io5";
+import { MdOutlineBolt , MdOutlineShoppingCart } from "react-icons/md";
+
 
 import data from '../Assets/data';
+import Specifications from '../Specifications/Specifications';
 
 const ProductDetail = () => {
     const { id } = useParams(); 
@@ -23,7 +26,16 @@ const ProductDetail = () => {
                     <div className='Image'>
                         <img className='productImage' src={product.img} alt="" />
                     </div>
-                    <div>Button</div>
+                    <div className='buttonsContainer'>
+                        <button className='productOrderNow'> 
+                            <MdOutlineBolt />
+                            Order Now
+                        </button>
+                        <button className='productAddToCart'>
+                            <MdOutlineShoppingCart />
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
                 <div className='productDetails'>
                     <p className='productName'>{product.ProductName}</p>
@@ -40,6 +52,31 @@ const ProductDetail = () => {
                                 <IoLocationSharp className='locationIcon'/>
                                 <input type="text" name="" id="" placeholder='enter delivery pincode'/>
                         </div>
+                    </div>
+
+
+                    <div className='specificationsContainer'>
+
+                        <div className='specificationsHead'>
+                            <h3> Specifications</h3>
+                        </div>
+                        <div className='specificationsBody'>
+                        {product.specifications.map((spec, index) => (
+                        <div key={index} className='specificationItem'>
+                            {Object.entries(spec).map(([key, value]) => (
+                                <div key={key}>
+                                    <p>{key}:</p> 
+                                    <b><p>{value}</p></b>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                        </div>
+                        <div className='specificationsWarrenty'>
+                            <h4>Warrenty</h4>
+                            <p> Company covered warrenty of 1 year is available for this product</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
