@@ -3,7 +3,42 @@
   margin-top: 128px;
   padding: 0 300px;
 }
-.paymentOtionsContainer .paymentMethodsContainer {
+.paymentOtionsContainer .payNowBtn {
+  width: 100%;
+  padding: 15px;
+  background-color: #313131;
+  border: none;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+.paymentMethodsContainer {
+  padding: 30px;
+  border: 1px solid rgb(215, 215, 215);
+}
+
+.collapsibleContent {
   padding: 10px;
-  background-color: rgb(234, 234, 234);
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: block;
+}
+
+.paymentMethod {
+  margin-top: -24px;
+  margin-bottom: 32px;
+}
+.paymentMethod h5 {
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) {
+  .paymentOtionsContainer {
+    padding: 0 64px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .paymentOtionsContainer {
+    padding: 0 32px;
+  }
 }/*# sourceMappingURL=PaymentOptions.css.map */
