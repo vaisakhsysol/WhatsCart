@@ -10,15 +10,10 @@ import data from '../Assets/data';
 
 const ProductDetail = () => {
     const { id } = useParams(); 
-
-    // Find the product data based on the ID
     const product = data.find(item => item.id === parseInt(id));
-
     if (!product) {
         return <div>Product not found</div>; 
     }
-
-
     return (
         <div className='productDetailsContainer'>
             <div className='productImageAndDetailsContainer' >
