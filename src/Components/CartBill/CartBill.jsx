@@ -1,3 +1,5 @@
+import './CartBill.css'
+
 let CartBill=()=>{
     return(
         <div className='billingContainerMain'>

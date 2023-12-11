@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.AddressDeliveryContainer {
+  margin-top: 128px;
+  padding: 0 256px;
+}
+.AddressDeliveryContainer .typeOfOrder {
+  display: flex;
+  justify-content: space-between;
+}
+.AddressDeliveryContainer .typeOfOrder .pickupBtn {
+  width: 50%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+.AddressDeliveryContainer .typeOfOrder .pickupBtn:hover {
+  background-color: #00A896;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.AddressDeliveryContainer .typeOfOrder .deliverBtn {
+  width: 50%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  margin-left: 8px;
+}
+.AddressDeliveryContainer .typeOfOrder .deliverBtn:hover {
+  background-color: #00A896;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=AddressDelivery.css.map */

@@ -1,1 +1,10 @@
-/*# sourceMappingURL=CartBill.css.map */
+.billingContainerMain {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 0 64px;
+  margin-top: 12px;
+}
+.billingContainerMain .billingContainerPrice, .billingContainerMain .billingContainerDelivery, .billingContainerMain .billingContainerTax {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+}/*# sourceMappingURL=CartBill.css.map */

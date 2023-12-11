@@ -1,0 +1,45 @@
+@import '../variables';
+
+.AddressDeliveryContainer{
+    margin-top: 128px;
+    padding: 0 256px;
+
+    .typeOfOrder{
+        display: flex;
+        justify-content: space-between;
+        .pickupBtn{
+            width: 50%;
+            padding: 12px;
+            background-color: $secondaryColor;
+            border: 1px solid black;
+    
+            &:hover{
+                background-color: $primaryColor;
+                color: $secondaryColor;
+                border: none;
+                cursor: pointer;
+    
+            }
+    
+        }
+    
+        .deliverBtn{
+            width: 50%;
+            padding: 12px;
+            background-color: $secondaryColor;
+            border: 1px solid black;
+            margin-left: 8px;
+    
+            &:hover{
+                background-color: $primaryColor;
+                color: $secondaryColor;
+                border: none;
+                cursor: pointer;
+    
+            }
+        }
+    }
+
+    
+    
+}

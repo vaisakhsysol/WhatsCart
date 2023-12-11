@@ -1,0 +1,20 @@
+.billingContainerMain{
+    border: 1px solid rgb(198, 198, 198);
+    padding: 0 64px;
+    margin-top: 12px;
+  
+
+    .billingContainerPrice{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -14px;
+
+    }
+    .billingContainerTax{
+        @extend .billingContainerPrice
+    }
+
+    .billingContainerDelivery{
+        @extend .billingContainerPrice
+    }
+}
