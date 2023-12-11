@@ -104,9 +104,9 @@ const DeliveryInfo = () => {
         <CartBill/>
       </div>
 
-      <div className="continurToPayButton">
+      {/* <div className="continurToPayButton">
         <button >Continue to Pay</button>
-      </div>
+      </div> */}
     </div>
   )
 };

@@ -5,22 +5,34 @@ import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
 
 const AddressDelivery = () => {
   const [showCartBill, setShowCartBill] = useState(true);
+  const [pickupClicked, setPickupClicked] = useState(false);
+  const [deliverClicked, setDeliverClicked] = useState(false);
 
   const handlePickupClick = () => {
     setShowCartBill(true);
+    setPickupClicked(true);
+    setDeliverClicked(false);
   };
 
   const handleDeliveryClick = () => {
     setShowCartBill(false);
+    setPickupClicked(false);
+    setDeliverClicked(true);
   };
 
   return (
     <div className="AddressDeliveryContainer">
       <div className="typeOfOrder">
-        <button className="pickupBtn" onClick={handlePickupClick}>
+        <button
+          className={pickupClicked ? "pickupBtn active" : "pickupBtn"}
+          onClick={handlePickupClick}
+        >
           Pick Up
         </button>
-        <button className="deliverBtn" onClick={handleDeliveryClick}>
+        <button
+          className={deliverClicked ? "deliverBtn active" : "deliverBtn"}
+          onClick={handleDeliveryClick}
+        >
           Deliver
         </button>
       </div>
@@ -28,11 +40,10 @@ const AddressDelivery = () => {
       <div>
         {showCartBill ? <CartBill /> : <DeliveryInfo />}
       </div>
-    
-
-      <div className="proceedToPayment">
-
+      <div className="continurToPayButton">
+        <button>Continue to Pay</button>
       </div>
+      <div className="proceedToPayment"></div>
     </div>
   );
 };

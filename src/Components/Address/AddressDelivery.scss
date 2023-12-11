@@ -22,6 +22,19 @@
             }
     
         }
+
+        .pickupBtn.active {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            border: none/* Your desired background color for 'Pick Up' button */;
+          }
+          
+          .deliverBtn.active {
+            background-color: $primaryColor; 
+            color: $secondaryColor;
+            border:none/* Your desired background color for 'Deliver' button */;
+          }
+          
     
         .deliverBtn{
             width: 50%;
@@ -42,4 +55,16 @@
 
     
     
+}
+
+@media screen and (max-width:1024px) {
+    .AddressDeliveryContainer{
+        padding:  0 64px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .AddressDeliveryContainer{
+        padding:  0 32px;
+    }
 }

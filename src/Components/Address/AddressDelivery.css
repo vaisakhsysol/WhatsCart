@@ -19,6 +19,16 @@
   border: none;
   cursor: pointer;
 }
+.AddressDeliveryContainer .typeOfOrder .pickupBtn.active {
+  background-color: #00A896;
+  color: #ffffff;
+  border: none;
+}
+.AddressDeliveryContainer .typeOfOrder .deliverBtn.active {
+  background-color: #00A896;
+  color: #ffffff;
+  border: none;
+}
 .AddressDeliveryContainer .typeOfOrder .deliverBtn {
   width: 50%;
   padding: 12px;
@@ -31,4 +41,15 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .AddressDeliveryContainer {
+    padding: 0 64px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .AddressDeliveryContainer {
+    padding: 0 32px;
+  }
 }/*# sourceMappingURL=AddressDelivery.css.map */
