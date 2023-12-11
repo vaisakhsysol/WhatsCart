@@ -1,5 +1,7 @@
 import React from "react"
 import './PaymentOptions.css'
+import Collapsible from 'react-collapsible';
+
 
 const PaymentOptions = (props) => {
   return (
@@ -8,6 +10,9 @@ const PaymentOptions = (props) => {
 
         <div className="paymentMethodsContainer">
             <h5> SELECT PAYMENT METHOD </h5>
+
+            
+            
         </div>
 
 
