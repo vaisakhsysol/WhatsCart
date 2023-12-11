@@ -1,0 +1,11 @@
+@import '../variables';
+
+.paymentOtionsContainer{
+    margin-top: 128px;
+    padding: 0 256px;
+
+    .paymentMethodsContainer{
+        padding: 10px;
+        background-color: rgb(234, 234, 234);
+    }
+}

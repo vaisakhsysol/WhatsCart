@@ -117,25 +117,44 @@
     }
 
     .alreadySavedAddressesContainer{
-        .radio{
-            label{
-                display: flex;
-                align-items: center;
-                border: 1px solid rgb(216, 216, 216);
-                margin-bottom: 8px;
-                padding: 20px;
 
-                &:hover{
-                    cursor: pointer;
-                }
+        form{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            .radio{
+                
+   
+               label{
+                   display: flex;
+                   align-items: center;
+                   border: 1px solid rgb(216, 216, 216);
+                   margin-bottom: 8px;
+                   padding: 20px;
+   
+                   &:hover{
+                       cursor: pointer;
+                   }
+   
+   
+                   p{
+                       margin-left: 32px;
+                       margin-top: -12px;
+                   }
+   
+                   .removeBtn{
+                       background-color: $secondaryColor;
+                       border: none;
+                       color: blue;
 
-
-                p{
-                    margin-left: 32px;
-                    margin-top: -12px;
-                }
-            }
+                       &:hover{
+                        cursor: pointer;
+                       }
+                   }
+               }
+           }
         }
+        
        
     
     }
@@ -150,6 +169,10 @@
         background-color: $textColor;
         color: $secondaryColor;
         border: none;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

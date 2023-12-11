@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./AddressDelivery.css";
 import CartBill from "../CartBill/CartBill";
 import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
+import { Link } from "react-router-dom";
 
 const AddressDelivery = () => {
   const [showCartBill, setShowCartBill] = useState(true);
@@ -12,17 +13,23 @@ const AddressDelivery = () => {
     setShowCartBill(true);
     setPickupClicked(true);
     setDeliverClicked(false);
+
+    alert("You Will Have to Pick Up")
   };
 
   const handleDeliveryClick = () => {
     setShowCartBill(false);
     setPickupClicked(false);
     setDeliverClicked(true);
+
+    alert("We Will Deliver")
   };
 
   return (
     <div className="AddressDeliveryContainer">
+        <h3>Choose the Type of delivery</h3>
       <div className="typeOfOrder">
+        
         <button
           className={pickupClicked ? "pickupBtn active" : "pickupBtn"}
           onClick={handlePickupClick}
@@ -40,9 +47,12 @@ const AddressDelivery = () => {
       <div>
         {showCartBill ? <CartBill /> : <DeliveryInfo />}
       </div>
-      <div className="continurToPayButton">
-        <button>Continue to Pay</button>
-      </div>
+      <Link to={`/payment/`}>
+        <div className="continurToPayButton">
+            <button>Continue to Pay</button>
+        </div>
+      </Link>
+      
       <div className="proceedToPayment"></div>
     </div>
   );

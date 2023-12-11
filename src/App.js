@@ -6,6 +6,7 @@ import Offers from "./Pages/Offers";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Pages/Cart";
 import Address from "./Pages/Address";
+import Payment from "./Pages/Payment";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/offers" element = {<Offers/>}/>
           <Route path="/cart" element = {<Cart/>}/>
           <Route path="/address" element = {<Address/>}/>
+          <Route path="/payment" element = {<Payment/>}/>
         </Routes>
 
         <Footer/>

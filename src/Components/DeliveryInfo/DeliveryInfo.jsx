@@ -1,14 +1,57 @@
-import React from "react"
+import {React} from "react"
 import CartBill from "../CartBill/CartBill";
 import './DeliveryInfo.css'
 import { MdMyLocation } from "react-icons/md";
+import { useState } from "react";
 
 
 
 const DeliveryInfo = () => {
+
+    const [addresses, setAddresses] = useState([
+        {
+          id: 1,
+          address: {
+            line1: "Pukkattupady - Perumbavoor Rd",
+            line2: "Thadiyittaparambu",
+            city: "Kerala",
+            pincode: "626605",
+            phone: "0484 268 2260",
+          },
+        },
+        {
+            id: 2,
+            address: {
+              line1: "Pukkattupady - Perumbavoor Rd",
+              line2: "Thadiyittaparambu",
+              city: "Kerala",
+              pincode: "626605",
+              phone: "0484 268 2260",
+            },
+          },
+          {
+            id: 3,
+            address: {
+              line1: "Pukkattupady - Perumbavoor Rd",
+              line2: "Thadiyittaparambu",
+              city: "Kerala",
+              pincode: "626605",
+              phone: "0484 268 2260",
+            },
+          },
+       
+      ]);
+
+      const removeAddress = (id) => {
+        const updatedAddresses = addresses.filter((addr) => addr.id !== id);
+        setAddresses(updatedAddresses);
+      };
+
+
+
   return (
     <div>
-      <h3>DELIVER TO YOUR DOORSTEP </h3>
+      {/* <h3>DELIVER TO YOUR DOORSTEP </h3> */}
       <h5>DELIVERY INFORMATION </h5>
       <div className="deliveryInfoContainer">
         <div className="deliveryInputsContainer">
@@ -62,40 +105,29 @@ const DeliveryInfo = () => {
             
             <div className="radioAndSelectedAdderss">
                 <form>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="option1" checked={true} />
-                            <div>
-                               <p>Pukkattupady - Perumbavoor Rd</p>
-                               <p>Thadiyittaparambu</p>
-                               <p>Kerala, 626605</p>
-                               <p>0484 268 2260</p>
-                            </div>
-                            
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="option2" checked={false}/>
-                            <div>
-                            <p>Pukkattupady - Perumbavoor Rd</p>
-                               <p>Thadiyittaparambu</p>
-                               <p>Kerala, 626605</p>
-                               <p>0484 268 2260</p>
-                            </div>
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="option3" checked={false}/>
-                            <div>
-                            <p>Pukkattupady - Perumbavoor Rd</p>
-                               <p>Thadiyittaparambu</p>
-                               <p>Kerala, 626605</p>
-                               <p>0484 268 2260</p>
-                            </div>
-                        </label>
-                    </div>
+                    {addresses.map((addr) => (
+              <div className="radio" key={addr.id}>
+                <label>
+                  <input
+                    type="radio"
+                    value={`option${addr.id}`}
+                    
+                  />
+                  <div>
+                    <p>{addr.address.line1}</p>
+                    <p>{addr.address.line2}</p>
+                    <p>{addr.address.city}, {addr.address.pincode}</p>
+                    <p>{addr.address.phone}</p>
+                    <button
+                      className="removeBtn"
+                      onClick={() => removeAddress(addr.id)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </label>
+              </div>
+            ))}
                 </form>
             </div>
         </div>
