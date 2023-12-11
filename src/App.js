@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Cart from "./Pages/Cart";
 import Address from "./Pages/Address";
 import Payment from "./Pages/Payment";
+import Success from "./Pages/Success";
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/cart" element = {<Cart/>}/>
           <Route path="/address" element = {<Address/>}/>
           <Route path="/payment" element = {<Payment/>}/>
+          <Route path="/success" element = {<Success/>}/>
         </Routes>
 
         <Footer/>
