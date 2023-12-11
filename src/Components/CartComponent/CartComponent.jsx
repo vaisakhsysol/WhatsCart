@@ -2,6 +2,8 @@ import './CartComponent.css'
 import imageOne from '../Assets/Images/LENovoL5.jpg'
 import { MdDelete } from "react-icons/md";
 import { FiMinus , FiPlus } from "react-icons/fi";
+import { Link } from 'react-router-dom';
+import CartBill from '../CartBill/CartBill';
 
 
 
@@ -25,7 +27,7 @@ let CartComponent=()=>{
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores libero quas eos praesentium doloribus. Tempore ea voluptates eos velit incidunt!
                             </p>
                             <p className='productPrice'>
-                                Rs.68,6862
+                                <b>Rs.68,6862</b>
                             </p>
                             <div className='cartIncAndDecContainer'>
                                 <button className='cartDecrementBtn'>
@@ -47,10 +49,16 @@ let CartComponent=()=>{
                 
             </div>
 
+            <CartBill/>
+
+            
+
             <div className='paymentContainer'>
-                <button>
-                    Proceed to Confirm
-                </button>
+                <Link to={`/address/`}>
+                    <button>
+                        Proceed to Confirm
+                    </button>
+                </Link>
             </div>
             
         </div>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .cartComponentContainer {
-  padding: 0 128px;
+  padding: 0 256px;
   margin-top: 128px;
   margin-bottom: 128px;
 }
@@ -31,13 +31,17 @@
   width: 100%;
 }
 .cartComponentContainer .cartProduct .cartInternalProductDetails .cartIncAndDecContainer {
-  margin-top: 32px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .cartComponentContainer .cartProduct .cartInternalProductDetails .cartIncAndDecContainer button {
   background-color: #ffffff;
   border: none;
   margin-left: 5px;
   margin-right: 5px;
+}
+.cartComponentContainer .cartProduct .cartInternalProductDetails .cartIncAndDecContainer button:hover {
+  cursor: pointer;
 }
 .cartComponentContainer .cartProduct .cartInternalProductDetails .cartIncAndDecContainer .cartDecrementBtn {
   border: none;
@@ -83,7 +87,21 @@
 .cartComponentContainer .paymentContainer button:hover {
   cursor: pointer;
 }
-
+.cartComponentContainer .billingContainerMain {
+  border: 1px solid rgb(198, 198, 198);
+  padding: 0 64px;
+  margin-top: 12px;
+}
+.cartComponentContainer .billingContainerMain .billingContainerPrice, .cartComponentContainer .billingContainerMain .billingContainerDelivery, .cartComponentContainer .billingContainerMain .billingContainerTax {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+}
+@media screen and (max-width: 1024px) {
+  .cartComponentContainer {
+    padding: 0 128px;
+  }
+}
 @media screen and (max-width: 768px) {
   .cartComponentContainer {
     padding: 0 64px;
@@ -95,5 +113,38 @@
   }
   .cartComponentContainer .cartProduct {
     flex-direction: column;
+  }
+  .cartComponentContainer .cartProduct img {
+    width: 96%;
+  }
+  .cartComponentContainer .cartProduct .cartInternalProductDetails {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .cartComponentContainer .cartProduct .cartInternalProductDetails .cartIncAndDecContainer {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: start;
+  }
+  .cartComponentContainer .cartProduct .cartInternalProductDetails .productDesc {
+    margin-left: 12px;
+    font-size: 13px;
+    width: 90%;
+  }
+  .cartComponentContainer .cartProduct .cartInternalProductDetails .productPrice {
+    margin-left: 12px;
+    font-size: 20px;
+  }
+  .cartComponentContainer .billingContainerMain {
+    border: 1px solid rgb(198, 198, 198);
+    padding: 0 32px;
+    margin-top: 12px;
+  }
+  .cartComponentContainer .billingContainerMain .billingContainerPrice, .cartComponentContainer .billingContainerMain .billingContainerTax, .cartComponentContainer .billingContainerMain .billingContainerDelivery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -14px;
   }
 }/*# sourceMappingURL=CartComponent.css.map */

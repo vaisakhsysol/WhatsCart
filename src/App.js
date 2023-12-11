@@ -5,6 +5,7 @@ import Product from "./Pages/Product";
 import Offers from "./Pages/Offers";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Pages/Cart";
+import Address from "./Pages/Address";
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/product/:id" element = {<Product/>}/>
           <Route path="/offers" element = {<Offers/>}/>
           <Route path="/cart" element = {<Cart/>}/>
+          <Route path="/address" element = {<Address/>}/>
         </Routes>
 
         <Footer/>
