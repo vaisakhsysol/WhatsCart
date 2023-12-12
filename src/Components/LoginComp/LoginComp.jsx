@@ -54,7 +54,7 @@ const LoginComp = (props) => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
-              {errors.username && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.username}</span>}
+              {errors.username && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.username}</span>}
             </div>
             <div className="passwordContainer">
               <label htmlFor="password">Password </label>
@@ -64,7 +64,7 @@ const LoginComp = (props) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              {errors.password && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.password}</span>}
+              {errors.password && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.password}</span>}
             </div>
             <div className="buttonsContainer">
               <div className="credButtonsContainer">

@@ -28,7 +28,6 @@ const SignUpComp = (props) => {
       formIsValid = false;
       newErrors['email'] = 'Email is required';
     } else {
-      // Basic email validation
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(email)) {
         formIsValid = false;
@@ -75,7 +74,7 @@ const SignUpComp = (props) => {
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
-                {errors.firstName && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.firstName}</span>}
+                {errors.firstName && <span style={{color:"red" , marginTop:" 4px", fontSize:"small"}} className="error">{errors.firstName}</span>}
               </div>
               <div className="usernameAndEmailContainer">
                 <label htmlFor="lastName"> Last Name</label>
@@ -85,7 +84,7 @@ const SignUpComp = (props) => {
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
-                {errors.lastName && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.lastName}</span>}
+                {errors.lastName && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.lastName}</span>}
               </div>
               <div className="usernameAndEmailContainer">
                 <label htmlFor="email"> Email</label>
@@ -95,7 +94,7 @@ const SignUpComp = (props) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                {errors.email && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.email}</span>}
+                {errors.email && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.email}</span>}
               </div>
               <div className="usernameAndEmailContainer">
                 <label htmlFor="password"> Password </label>
@@ -105,7 +104,7 @@ const SignUpComp = (props) => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                {errors.password && <span style={{color:"red" , marginTop:" 4px"}} className="error">{errors.password}</span>}
+                {errors.password && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.password}</span>}
               </div>
             </div>
             <div>
