@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './PaymentOptions.css';
 import { FaCaretDown } from "react-icons/fa";
 import CartBill from "../CartBill/CartBill";
+import { Link } from "react-router-dom";
 
 
 const PaymentOptions = () => {
@@ -69,7 +70,10 @@ const PaymentOptions = () => {
 
       <CartBill/>
 
-      <button className="payNowBtn"> Pay Now </button>
+      <Link to={`/success/`}>
+        <button className="payNowBtn"> Pay Now </button>
+
+      </Link>
     </div>
   );
 };

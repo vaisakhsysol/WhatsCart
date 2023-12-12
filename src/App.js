@@ -8,6 +8,9 @@ import Cart from "./Pages/Cart";
 import Address from "./Pages/Address";
 import Payment from "./Pages/Payment";
 import Success from "./Pages/Success";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
+
 
 
 
@@ -25,6 +28,9 @@ function App() {
           <Route path="/address" element = {<Address/>}/>
           <Route path="/payment" element = {<Payment/>}/>
           <Route path="/success" element = {<Success/>}/>
+          <Route path="/login" element = {<Login/>}/>
+          <Route path="/signup" element = {<SignUp/>}/>
+          
         </Routes>
 
         <Footer/>

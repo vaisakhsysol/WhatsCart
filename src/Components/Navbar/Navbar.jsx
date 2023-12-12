@@ -24,14 +24,16 @@ return(
             <div className="loginAndSignup">
                 <Link to={`/cart/`}>
                     <button className="bagButton">
-                        
                         <LuShoppingBag className="bagIcon"/>
                     </button>
                 </Link>
                 
-                <button className="logButton">LOGIN
-                    <BiLogInCircle className="logIcon" />
-                </button>
+                <Link to={`/login/`}>
+                    <button className="logButton">LOGIN
+                        <BiLogInCircle className="logIcon" />
+                    </button>
+                </Link>
+               
             </div>
         </nav>
          
