@@ -48,23 +48,37 @@
     .detailsContainerMain{
         width: 100%;
         border: 1px solid rgb(204, 204, 204);
-        .detailsHeader{
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
 
-            button{
-                background-color: $secondaryColor;
-                border: none;
-                width: 150px;
+        .detailsContentContainer{
+
+            padding: 20px;
+            .detailsHeader{
                 display: flex;
-                justify-content: space-around;
-                align-items: center;
-                font-weight: 600;
-                cursor: pointer;
+                justify-content: space-between;
+
+                button{
+                    background-color: $secondaryColor;
+                    border: none;
+                    width: 150px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+                
             }
-            
         }
+
+        .titleText{
+            font-size: map-get($fontSize, medium );
+            margin-top: 8px;
+        }
+
+        label{
+            font-size: map-get($fontSize, small );
+        }
+        
     }
 
    

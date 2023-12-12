@@ -39,12 +39,14 @@
   width: 100%;
   border: 1px solid rgb(204, 204, 204);
 }
-.userContainer .detailsContainerMain .detailsHeader {
-  display: flex;
-  justify-content: space-between;
+.userContainer .detailsContainerMain .detailsContentContainer {
   padding: 20px;
 }
-.userContainer .detailsContainerMain .detailsHeader button {
+.userContainer .detailsContainerMain .detailsContentContainer .detailsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.userContainer .detailsContainerMain .detailsContentContainer .detailsHeader button {
   background-color: #ffffff;
   border: none;
   width: 150px;
@@ -53,4 +55,11 @@
   align-items: center;
   font-weight: 600;
   cursor: pointer;
+}
+.userContainer .detailsContainerMain .titleText {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.userContainer .detailsContainerMain label {
+  font-size: 13px;
 }/*# sourceMappingURL=UserComp.css.map */
