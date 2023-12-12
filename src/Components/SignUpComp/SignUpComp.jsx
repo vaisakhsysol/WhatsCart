@@ -109,8 +109,10 @@ const SignUpComp = (props) => {
             </div>
             <div>
               <button className="signUpBtn" type="submit">Sign Up</button>
-              <Link to={`/login/`}>
-                <button className="loginBtn">Already have an Account ? Login</button>
+              
+                <h5>Already have an Account ?</h5>
+                <Link to={`/login/`}>
+                <button className="loginBtn"> Login</button>
               </Link>
             </div>
           </form>
