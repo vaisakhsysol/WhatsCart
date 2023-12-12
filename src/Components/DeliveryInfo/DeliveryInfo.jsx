@@ -22,11 +22,11 @@ const DeliveryInfo = () => {
         {
             id: 2,
             address: {
-              line1: "Pukkattupady - Perumbavoor Rd",
+              line1: "Parshinijadavu - Ernakulam Rd",
               line2: "Thadiyittaparambu",
               city: "Kerala",
               pincode: "626605",
-              phone: "0484 268 2260",
+              phone: "0998 268 2260",
             },
           },
           {

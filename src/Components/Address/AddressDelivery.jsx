@@ -14,7 +14,7 @@ const AddressDelivery = () => {
     setPickupClicked(true);
     setDeliverClicked(false);
 
-    alert("You Will Have to Pick Up");
+    // alert("You Will Have to Pick Up");
   };
 
   const handleDeliveryClick = () => {
@@ -22,7 +22,7 @@ const AddressDelivery = () => {
     setPickupClicked(false);
     setDeliverClicked(true);
 
-    alert("We Will Deliver");
+    // alert("We Will Deliver");
   };
 
   return (
