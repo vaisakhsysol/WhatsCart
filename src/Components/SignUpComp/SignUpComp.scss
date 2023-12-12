@@ -1,1 +1,208 @@
 @import '../variables';
+
+.signpContainer{
+    margin-top: 128px;
+    padding: 0 250px;
+    display: flex;
+
+    .container{
+        border: 2px solid $textColor;
+        display: flex;
+        width: 100%;
+        .imageContainer{
+            height: 100%;
+            img{
+                max-width: 400px;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .inputsContainer{
+            padding: 15px;
+            width: 100%;
+
+            h3{
+                margin-left: 15px;
+            }
+
+            .usernameAndEmailContainer{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px ;
+
+                label{
+                    font-size: map-get($fontSize, small );
+                }
+                
+                input{
+                    width: 80%;
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid $textColor;
+                }
+            }
+
+            .signUpBtn{
+                width: 82%;
+                padding: 15px;
+                border: none;
+                background-color: #ff642c;
+                color: $secondaryColor;
+                cursor: pointer;
+            }
+
+            .loginBtn{
+                margin-top: 8px;
+                width: 82%;
+                padding: 15px;
+                border: 1px solid #ff642c;;
+                background-color: rgb(255, 255, 255);
+                color: #ff642c;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width:1024px) {
+    .signpContainer{
+      padding: 0 64px;
+      
+    }
+}
+
+@media screen and (max-width:768px) {
+    .signpContainer{
+      padding: 0 32px;
+      
+      .container{
+        border: 2px solid $textColor;
+        display: flex;
+        width: 100%;
+        .imageContainer{
+            height: 100%;
+            img{
+                max-width: 300px;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .inputsContainer{
+            padding: 15px;
+            width: 100%;
+
+            h3{
+                margin-left: 15px;
+            }
+
+            .usernameAndEmailContainer{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px ;
+
+                label{
+                    font-size: map-get($fontSize, small );
+                }
+                
+                input{
+                    width: 80%;
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid $textColor;
+                }
+            }
+
+            .signUpBtn{
+                width: 82%;
+                padding: 15px;
+                border: none;
+                background-color: #ff642c;
+                color: $secondaryColor;
+                cursor: pointer;
+            }
+
+            .loginBtn{
+                margin-top: 8px;
+                width: 82%;
+                padding: 15px;
+                border: 1px solid #ff642c;;
+                background-color: rgb(255, 255, 255);
+                color: #ff642c;
+                cursor: pointer;
+            }
+        }
+    }
+      
+    }
+}
+
+@media screen and (max-width:425px) {
+    .signpContainer{
+      padding: 0 16px;
+      
+      .container{
+        border: 2px solid $textColor;
+        display: flex;
+        width: 100%;
+        .imageContainer{
+            height: 100%;
+            img{
+                max-width: 300px;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+            }
+        }
+
+        .inputsContainer{
+            padding: 15px;
+            width: 100%;
+
+            h3{
+                margin-left: 15px;
+            }
+
+            .usernameAndEmailContainer{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px ;
+
+                label{
+                    font-size: map-get($fontSize, small );
+                }
+                
+                input{
+                    width: 80%;
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid $textColor;
+                }
+            }
+
+            .signUpBtn{
+                width: 82%;
+                padding: 15px;
+                border: none;
+                background-color: #ff642c;
+                color: $secondaryColor;
+                cursor: pointer;
+            }
+
+            .loginBtn{
+                margin-top: 8px;
+                width: 82%;
+                padding: 15px;
+                border: 1px solid #ff642c;;
+                background-color: rgb(255, 255, 255);
+                color: #ff642c;
+                cursor: pointer;
+            }
+        }
+    }
+      
+    }
+}
