@@ -1,0 +1,72 @@
+@import '../variables';
+
+.userContainer{
+    margin-top: 128px;
+    padding: 0 128px;
+    display: flex;
+    gap: 13px;
+
+    .tabButton{
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $secondaryColor;
+        border: 0.5px solid rgb(198, 198, 198);
+        cursor: pointer;
+        margin-bottom: 12px;
+        min-width: 300px;
+        width: 300px;
+
+        .details{
+            font-size: map-get($fontSize, medium );
+        }
+
+        .detailsContainer{
+            width: 70%;
+            text-align: left;
+
+        }
+
+        .description{
+            font-size: map-get($fontSize, small );
+            margin-top: -12px;
+            color: rgb(170, 170, 170);
+
+        }
+
+        .userIcon{
+            font-size: x-large;
+        }
+
+        .arrowIcon{
+            font-size: x-large;
+
+        }
+    }
+
+    .detailsContainerMain{
+        width: 100%;
+        border: 1px solid rgb(204, 204, 204);
+        .detailsHeader{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+            button{
+                background-color: $secondaryColor;
+                border: none;
+                width: 150px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+   
+
+}

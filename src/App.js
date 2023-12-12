@@ -10,6 +10,7 @@ import Payment from "./Pages/Payment";
 import Success from "./Pages/Success";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
+import User from "./Pages/User";
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/success" element = {<Success/>}/>
           <Route path="/login" element = {<Login/>}/>
           <Route path="/signup" element = {<SignUp/>}/>
+          <Route path="/user" element = {<User/>}/>
           
         </Routes>
 

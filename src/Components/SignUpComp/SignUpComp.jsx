@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const SignUpComp = (props) => {
   const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [phoneNumber, setphoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
@@ -19,7 +19,7 @@ const SignUpComp = (props) => {
       newErrors['firstName'] = 'First Name is required';
     }
 
-    if (!lastName) {
+    if (!phoneNumber) {
       formIsValid = false;
       newErrors['lastName'] = 'Last Name is required';
     }
@@ -77,14 +77,14 @@ const SignUpComp = (props) => {
                 {errors.firstName && <span style={{color:"red" , marginTop:" 4px", fontSize:"small"}} className="error">{errors.firstName}</span>}
               </div>
               <div className="usernameAndEmailContainer">
-                <label htmlFor="lastName"> Last Name</label>
+                <label htmlFor="phoneNumber">  Phone Number</label>
                 <input
-                  type="text"
-                  id="lastName"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  type="number"
+                  id="phoneNumber"
+                  value={phoneNumber}
+                  onChange={(e) => setphoneNumber(e.target.value)}
                 />
-                {errors.lastName && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.lastName}</span>}
+                {errors.phoneNumber && <span style={{color:"red" , marginTop:" 4px",fontSize:"small"}} className="error">{errors.phoneNumber}</span>}
               </div>
               <div className="usernameAndEmailContainer">
                 <label htmlFor="email"> Email</label>

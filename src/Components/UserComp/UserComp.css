@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.userContainer {
+  margin-top: 128px;
+  padding: 0 128px;
+  display: flex;
+  gap: 13px;
+}
+.userContainer .tabButton {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 0.5px solid rgb(198, 198, 198);
+  cursor: pointer;
+  margin-bottom: 12px;
+  min-width: 300px;
+  width: 300px;
+}
+.userContainer .tabButton .details {
+  font-size: 20px;
+}
+.userContainer .tabButton .detailsContainer {
+  width: 70%;
+  text-align: left;
+}
+.userContainer .tabButton .description {
+  font-size: 13px;
+  margin-top: -12px;
+  color: rgb(170, 170, 170);
+}
+.userContainer .tabButton .userIcon {
+  font-size: x-large;
+}
+.userContainer .tabButton .arrowIcon {
+  font-size: x-large;
+}
+.userContainer .detailsContainerMain {
+  width: 100%;
+  border: 1px solid rgb(204, 204, 204);
+}
+.userContainer .detailsContainerMain .detailsHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.userContainer .detailsContainerMain .detailsHeader button {
+  background-color: #ffffff;
+  border: none;
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}/*# sourceMappingURL=UserComp.css.map */

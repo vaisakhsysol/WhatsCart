@@ -13,16 +13,12 @@ const AddressDelivery = () => {
     setShowCartBill(true);
     setPickupClicked(true);
     setDeliverClicked(false);
-
-    // alert("You Will Have to Pick Up");
   };
 
   const handleDeliveryClick = () => {
     setShowCartBill(false);
     setPickupClicked(false);
     setDeliverClicked(true);
-
-    // alert("We Will Deliver");
   };
 
   return (
