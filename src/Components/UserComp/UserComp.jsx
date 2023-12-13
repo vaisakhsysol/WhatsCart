@@ -24,7 +24,7 @@ const UserComp = (props) => {
   return (
     <div className="userContainer">
         
-        <div >
+        <div className="userTabButtons">
             <button className="tabButton">
                 <LiaUser className="userIcon"/>
                 <div className="detailsContainer">

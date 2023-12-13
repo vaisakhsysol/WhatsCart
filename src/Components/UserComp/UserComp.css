@@ -14,7 +14,6 @@
   border: 0.5px solid rgb(198, 198, 198);
   cursor: pointer;
   margin-bottom: 12px;
-  min-width: 300px;
   width: 300px;
 }
 .userContainer .tabButton .details {
@@ -49,6 +48,7 @@
 }
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader .logoutBtn {
   border: 1px solid #313131;
+  height: 40px;
 }
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader button {
   background-color: #ffffff;
@@ -167,4 +167,55 @@
   border: none;
   color: #00A896;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .userContainer {
+    padding: 0 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .userContainer {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .userContainer .userTabButtons {
+    display: flex;
+    gap: 5px;
+  }
+  .userContainer .userTabButtons .tabButton {
+    padding: 10px;
+    min-width: auto;
+  }
+  .userContainer .userTabButtons .tabButton .detailsContainer {
+    width: 50%;
+  }
+  .userContainer .userTabButtons .tabButton .detailsContainer .details {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .userContainer {
+    padding: 0 16px;
+  }
+  .userContainer .userTabButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .userContainer .userTabButtons .tabButton {
+    padding: 10px;
+    min-width: auto;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .userContainer .userTabButtons .tabButton .detailsContainer {
+    width: 50%;
+  }
+  .userContainer .userTabButtons .tabButton .detailsContainer .details {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
 }/*# sourceMappingURL=UserComp.css.map */

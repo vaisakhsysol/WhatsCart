@@ -15,7 +15,7 @@
         border: 0.5px solid rgb(198, 198, 198);
         cursor: pointer;
         margin-bottom: 12px;
-        min-width: 300px;
+        // min-width: 300px;
         width: 300px;
 
         .details{
@@ -59,6 +59,7 @@
 
                 .logoutBtn{
                     border: 1px solid $textColor;
+                    height: 40px;
                 }
 
                 button{
@@ -215,6 +216,72 @@
         cursor: pointer;
 
     }
-   
+}
 
+@media screen and (max-width:1024px) {
+    .userContainer{
+      padding: 0 32px;
+      
+    }
+}
+
+@media screen and (max-width:768px) {
+    .userContainer{
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+
+      .userTabButtons{
+        display: flex;
+        gap: 5px;
+
+        .tabButton{
+            padding: 10px;
+            min-width: auto;
+
+            .detailsContainer{
+                width: 50%;   
+
+                .details{
+                    font-size: map-get($fontSize, small );
+                    margin-bottom: 18px;
+                }
+            }
+          }
+
+      }
+      
+     
+
+    }
+}
+
+@media screen and (max-width:425px) {
+    .userContainer{
+      padding: 0 16px;
+
+      .userTabButtons{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .tabButton{
+            padding: 10px;
+            min-width: auto;
+            margin-bottom: 0px;
+            width: 100%;
+
+            .detailsContainer{
+                width: 50%;   
+
+                .details{
+                    font-size: map-get($fontSize, small );
+                    margin-bottom: 18px;
+                }
+            }
+          }
+
+      }
+      
+    }
 }
