@@ -28,8 +28,15 @@
                 padding: 12px;
                 border: none;
                 background-color: $primaryColor;
-
-                &:hover{
+                
+                display: flex;
+                align-items: center;
+                
+                
+                button{
+                    background-color: $primaryColor;
+                    border: none;
+                    width: 100%;
                     cursor: pointer;
                 }
             }
@@ -181,10 +188,8 @@
                 padding: 12px;
                 border: none;
                 background-color: $primaryColor;
-
-                &:hover{
-                    cursor: pointer;
-                }
+                cursor: pointer;
+              
                 
             }
 

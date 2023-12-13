@@ -1,6 +1,6 @@
 import '../ProductDetails/ProductDetails.css'
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlineBolt , MdOutlineShoppingCart } from "react-icons/md";
 
@@ -9,6 +9,11 @@ import data from '../Assets/data';
 
 
 const ProductDetail = () => {
+
+    const cartAlert=()=>{
+        alert("Product Added to Cart")
+    }
+
     const { id } = useParams(); 
     const product = data.find(item => item.id === parseInt(id));
     if (!product) {
@@ -22,11 +27,14 @@ const ProductDetail = () => {
                         <img className='productImage' src={product.img} alt="" />
                     </div>
                     <div className='buttonsContainer'>
-                        <button className='productOrderNow'> 
-                            <MdOutlineBolt />
-                            Order Now
-                        </button>
-                        <button className='productAddToCart'>
+                        <Link style={{textDecoration:"none"}} className='productOrderNow' to={`/cart/`}>
+                            <button > 
+                                <MdOutlineBolt />
+                                Order Now
+                            </button>
+                        </Link>
+                        
+                        <button onClick={cartAlert} className='productAddToCart'>
                             <MdOutlineShoppingCart />
                             Add to Cart
                         </button>
