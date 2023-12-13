@@ -4,7 +4,7 @@ import { MdOutlineMyLocation,MdSearch  } from "react-icons/md";
 import { LuShoppingBag } from "react-icons/lu";
 import { BiLogInCircle } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import LoggedIn from "../loggedInIcon/LoggedIn";
+// import LoggedIn from "../loggedInIcon/LoggedIn";
 
 
 let Navbar=()=>{
