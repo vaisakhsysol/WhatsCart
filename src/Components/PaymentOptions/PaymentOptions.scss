@@ -5,6 +5,7 @@
 .paymentOtionsContainer {
     margin-top: 128px;
     padding: 0 300px;
+    margin-bottom: 128px;
     // background-color: #f0f0f0;
 
     .payNowBtn{
@@ -32,6 +33,7 @@
     // margin-top: 10px;
     border-radius: 5px;
     display: block;
+    width: 100%;
   }
 
   .paymentMethod{
@@ -40,6 +42,7 @@
 
     h5{
         border-bottom: 1px solid black;
+        width: 100%;
     }
 
    

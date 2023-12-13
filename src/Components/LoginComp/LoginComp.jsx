@@ -7,6 +7,7 @@ const LoginComp = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+  
 
   const handleValidation = () => {
     let formIsValid = true;
