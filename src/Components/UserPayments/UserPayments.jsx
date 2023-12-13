@@ -11,7 +11,7 @@ const UserPayments = () => {
   return (
     <div>
       <div>
-      <form>
+      <form className="paymentMethod">
         <h3>Payment Method</h3>
         <p> in this section you are choosing the default payment Method</p>
         <div className="radio">
