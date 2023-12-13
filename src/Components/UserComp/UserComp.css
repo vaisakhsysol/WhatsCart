@@ -54,6 +54,7 @@
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader .logoutBtn {
   border: 1px solid #313131;
   height: 40px;
+  width: 100px;
 }
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader .logoutBtn:hover {
   background-color: #313131;

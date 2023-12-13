@@ -7,6 +7,7 @@ import { CiMapPin } from "react-icons/ci";
 import { MdKeyboardArrowRight , MdDeleteOutline,MdOutlineLocalPhone } from "react-icons/md";
 import { MdOutlineLogout } from "react-icons/md";
 import { TbTruckDelivery ,TbRoad} from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 
 const UserDetails = (props) => {
@@ -15,7 +16,9 @@ const UserDetails = (props) => {
       <div className="detailsContentContainer">
                 <div className="detailsHeader">
                     <h3>Personal Details</h3>
-                    <button className="logoutBtn">  <MdOutlineLogout /> Log Out </button> 
+                    <Link to={`/`}>
+                        <button className="logoutBtn">  <MdOutlineLogout /> Log Out </button> 
+                    </Link>
                 </div>
 
                 <div>

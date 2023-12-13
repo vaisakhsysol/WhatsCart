@@ -53,6 +53,7 @@
             margin-right: 5px;
             padding: 10px;
             width: 100px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -131,4 +132,22 @@
         }
     }     
     
+}
+
+
+@media screen and (max-width:425px) {
+    .logButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logIcon{
+            margin-left: 0px !important;
+        }
+        p{
+            display: none;
+        }
+        max-width: 50px;
+        text-align: center;
+    }
 }

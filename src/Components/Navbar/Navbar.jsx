@@ -29,7 +29,8 @@ return(
                 </Link>
                 
                 <Link to={`/login/`}>
-                    <button className="logButton">LOGIN
+                    <button className="logButton">
+                        <p>LOGIN</p>
                         <BiLogInCircle className="logIcon" />
                     </button>
                 </Link>
