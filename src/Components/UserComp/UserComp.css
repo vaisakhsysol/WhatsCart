@@ -4,6 +4,7 @@
   padding: 0 128px;
   display: flex;
   gap: 13px;
+  /* Add a class for the selected button */
 }
 .userContainer .tabButton {
   display: flex;
@@ -34,6 +35,10 @@
 .userContainer .tabButton .arrowIcon {
   font-size: x-large;
 }
+.userContainer .tabButton.selected {
+  background-color: #E8E8E8; /* Set your desired background color for the selected button */
+  /* Add any other styles for the selected button */
+}
 .userContainer .detailsContainerMain {
   margin-bottom: 128px;
   width: 100%;
@@ -49,6 +54,10 @@
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader .logoutBtn {
   border: 1px solid #313131;
   height: 40px;
+}
+.userContainer .detailsContainerMain .detailsContentContainer .detailsHeader .logoutBtn:hover {
+  background-color: #313131;
+  color: #ffffff;
 }
 .userContainer .detailsContainerMain .detailsContentContainer .detailsHeader button {
   background-color: #ffffff;
