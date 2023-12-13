@@ -29,7 +29,7 @@ return(
                     </button>
                 </Link>
                 
-                <Link to={`/login/`}>
+                <Link style={{textDecoration:"none"}} to={`/login/`}>
                     <button className="logButton">
                         <p>LOGIN</p>
                         <BiLogInCircle className="logIcon" />
