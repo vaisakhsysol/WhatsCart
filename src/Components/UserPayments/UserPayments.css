@@ -28,6 +28,16 @@
   margin-top: 12px;
   width: 60%;
 }
+.paymentMethod .radio span {
+  font-size: 13px;
+}
+.paymentMethod .radio h5 {
+  text-decoration: none;
+}
+.paymentMethod .radio h3 {
+  margin: 0px;
+  margin-top: 4px;
+}
 
 @media screen and (max-width: 425px) {
   form {

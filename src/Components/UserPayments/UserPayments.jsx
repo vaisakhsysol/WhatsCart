@@ -3,7 +3,7 @@ import './UserPayments.css'
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { FaGooglePay } from "react-icons/fa6";
 import { AiOutlineBank } from "react-icons/ai";
-import { TbTruckDelivery } from "react-icons/tb";
+import { BiSolidEdit } from "react-icons/bi";
 
 
 
@@ -12,38 +12,52 @@ const UserPayments = () => {
     <div>
       <div>
       <form className="paymentMethod">
-        <h3>Payment Method</h3>
-        <p> in this section you are choosing the default payment Method</p>
+        <h3>Saved Payment Method</h3>
+        <p> in this section you are choosing the Saved payment Method</p>
         <div className="radio">
+        <span> <BiSolidEdit/> Edit</span>
           <label>
-            <input type="radio" value="option1" checked={true} />
-              UPI Transaction
+            
+           
+            <div className="heading">
+            UPI - Saved
+              <div>
+                <h3>6541201545@upi</h3>
+              </div>
+            </div>
+             
 
           </label>
           <MdOutlineQrCodeScanner />
         </div>
         <div className="radio">
-          <label>
-            <input type="radio" value="option2" />
-            GPAY Transaction
+        <span> <BiSolidEdit/> Edit</span>
+        <label>
+            <div className="heading">
+            Gpay - Saved
+              <div>
+                <h3>+91 6541201545</h3>
+              </div>
+            </div>
+             
+
           </label>
           <FaGooglePay />
 
         </div>
         <div className="radio">
-          <label>
-            <input type="radio" value="option3" />
-            Net Banking
+        <span> <BiSolidEdit/> Edit</span>
+        <label>
+            <div className="heading">
+            Net Bank - Saved
+              <div>
+                <h3>Axis Platinum xx0599</h3>
+              </div>
+            </div>
+             
+
           </label>
           <AiOutlineBank />
-
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option3" />
-            Cash On Delivery
-          </label>
-          <TbTruckDelivery />
 
         </div>
 

@@ -43,7 +43,7 @@ const UserComp = (props) => {
           <button className={`tabButton ${activeTab === 'payments' ? 'selected' : ''}`} onClick={() => handleTabChange('payments')}>
             <BsCreditCard className="userIcon" />
             <div className="detailsContainer">
-              <p className="details"> Payment Methods</p>
+              <p className="details">Saved Payment Methods</p>
               <p className="description"> Add, Edit and Delete Payment Details </p>
             </div>
             <MdKeyboardArrowRight className="arrowIcon" />

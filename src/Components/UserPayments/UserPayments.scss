@@ -29,6 +29,18 @@
         display: flex;
         margin-top: 12px;
         width: 60%;
+
+        span{
+            font-size: map-get($fontSize, small );
+        }
+        h5{
+            text-decoration: none;
+            
+        }
+        h3{
+            margin: 0px;
+            margin-top: 4px;
+        }
     }
 }
 

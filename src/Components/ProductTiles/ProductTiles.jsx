@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 import HomeAddandSub from '../HomeAddandSub/HomeAddandSub';
 import Footer from '../Footer/Footer'; // Import the Footer component
+import { IoFilterOutline } from "react-icons/io5";
+
 
 const ProductTile = () => {
   const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Bag'));
@@ -55,7 +57,13 @@ const ProductTile = () => {
         <h3>Used Laptops & Desktops</h3>
         <div>
           <div className="dropdown">
-            {/* Dropdown content */}
+          <button class="dropbtn"> <IoFilterOutline />
+           Filter </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
           </div>
         </div>
       </div>
