@@ -4,6 +4,7 @@ import { MdOutlineMyLocation,MdSearch  } from "react-icons/md";
 import { LuShoppingBag } from "react-icons/lu";
 import { BiLogInCircle } from "react-icons/bi";
 import { Link } from "react-router-dom";
+// import { IoCartOutline } from 'react-icons/io5';
 // import LoggedIn from "../loggedInIcon/LoggedIn";
 
 

@@ -7,7 +7,7 @@ import HomeAddandSub from '../HomeAddandSub/HomeAddandSub';
 import Footer from '../Footer/Footer'; // Import the Footer component
 
 const ProductTile = () => {
-  const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Cart'));
+  const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Bag'));
   const [cartIcons, setCartIcons] = useState(Array(data.length).fill(true));
   const [counts, setCounts] = useState(Array(data.length).fill(0));
   const [totalPrice, setTotalPrice] = useState(0); // State to track total price
