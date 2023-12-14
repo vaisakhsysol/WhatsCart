@@ -67,6 +67,6 @@
     align-items: center;
     display: flex;
     margin-top: 12px;
-    width: 90%;
+    width: 100% !important;
   }
 }/*# sourceMappingURL=UserPayments.css.map */

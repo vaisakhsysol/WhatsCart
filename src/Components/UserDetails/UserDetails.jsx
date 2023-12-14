@@ -1,4 +1,5 @@
 import React from "react"
+import './UserDetails.css'
 import { LiaEditSolid } from "react-icons/lia";
 import { AiOutlineIdcard } from "react-icons/ai";
 import { IoHomeOutline } from "react-icons/io5";
@@ -8,6 +9,8 @@ import { MdKeyboardArrowRight , MdDeleteOutline,MdOutlineLocalPhone } from "reac
 import { MdOutlineLogout } from "react-icons/md";
 import { TbTruckDelivery ,TbRoad} from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { FiPlus } from "react-icons/fi";
+
 
 
 const UserDetails = (props) => {
@@ -62,6 +65,11 @@ const UserDetails = (props) => {
                             </button>
                         </div>
                        
+                    </div>
+                    <div>
+                        <button className="addAddressBtn">
+                            <FiPlus />
+                         Add Another Address</button>
                     </div>
                 </div>
 
