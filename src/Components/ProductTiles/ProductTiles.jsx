@@ -10,7 +10,7 @@ const ProductTile = () => {
   const [buttonTexts, setButtonTexts] = useState(Array(data.length).fill('Add to Bag'));
   const [cartIcons, setCartIcons] = useState(Array(data.length).fill(true));
   const [counts, setCounts] = useState(Array(data.length).fill(0));
-  const [totalPrice, setTotalPrice] = useState(0); // State to track total price
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleButtonClick = (index, price) => {
     const newButtonTexts = [...buttonTexts];
@@ -81,16 +81,16 @@ const ProductTile = () => {
                 <AddToCartButton
                   buttonText={buttonTexts[i]}
                   cartIcon={cartIcons[i]}
-                  onClick={() => handleButtonClick(i, product.price)} // Pass product price to handleButtonClick
+                  onClick={() => handleButtonClick(i, product.price)} 
                 />
               ) : (
-                buttonTexts[i] // Render the HomeaddAndSub component stored in buttonTexts
+                buttonTexts[i] 
               )}
             </div>
           ))}
         </div>
       </div>
-      <Footer totalPrice={totalPrice} /> {/* Pass totalPrice to Footer */}
+      <Footer totalPrice={totalPrice} />
     </div>
   );
 };
