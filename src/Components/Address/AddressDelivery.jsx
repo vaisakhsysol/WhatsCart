@@ -18,14 +18,14 @@ const AddressDelivery = () => {
     setShowCartBill(true);
     setPickupClicked(true);
     setDeliverClicked(false);
-    setShowTimeContainer(true); // Show timeContainer when Pick Up is clicked
+    setShowTimeContainer(true); 
   };
 
   const handleDeliveryClick = () => {
     setShowCartBill(false);
     setPickupClicked(false);
     setDeliverClicked(true);
-    setShowTimeContainer(false); // Hide timeContainer when Deliver is clicked
+    setShowTimeContainer(false); 
   };
 
   const handleTimeSelection = (time) => {
@@ -50,7 +50,7 @@ const AddressDelivery = () => {
         </button>
       </div>
 
-      {showTimeContainer && pickupClicked && ( // Conditionally render timeContainer
+      {showTimeContainer && pickupClicked && ( 
         <div className="timeContainer">
           <h5> PICKUP TIME </h5>
           <div>
