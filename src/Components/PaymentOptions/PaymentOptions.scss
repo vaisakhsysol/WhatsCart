@@ -40,11 +40,28 @@
         cursor: pointer;
         
     }
+
+    .tabContent {
+      display: none; /* Initially hide all tab content */
+    }
+    
+    /* Styles for active tab content */
+    .tabContent.active {
+      display: block; /* Show the active tab content */
+      /* Add styles for the active tab content */
+    }
+
+    .paymentMethodContainerMain{
+      border: 1px solid rgb(206, 206, 206);
+      width: 100%;
+      padding: 10px;
+    }
+
   }
   
   .paymentMethodsContainer {
     padding: 30px;
-    border: 1px solid rgb(215, 215, 215);
+    border: 1px solid rgb(0, 0, 0);
 
     // background-color: rgb(234, 234, 234);
   }

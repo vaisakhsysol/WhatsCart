@@ -3,6 +3,7 @@
   margin-top: 128px;
   padding: 0 300px;
   margin-bottom: 128px;
+  /* Styles for active tab content */
 }
 .paymentOtionsContainer .paymentOptionsContainerTabMain {
   display: flex;
@@ -29,10 +30,22 @@
   margin-top: 12px;
   cursor: pointer;
 }
+.paymentOtionsContainer .tabContent {
+  display: none; /* Initially hide all tab content */
+}
+.paymentOtionsContainer .tabContent.active {
+  display: block; /* Show the active tab content */
+  /* Add styles for the active tab content */
+}
+.paymentOtionsContainer .paymentMethodContainerMain {
+  border: 1px solid rgb(206, 206, 206);
+  width: 100%;
+  padding: 10px;
+}
 
 .paymentMethodsContainer {
   padding: 30px;
-  border: 1px solid rgb(215, 215, 215);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .collapsibleContent {

@@ -7,26 +7,10 @@ import { IoMdCard } from "react-icons/io";
 import { TbTruckDelivery } from "react-icons/tb";
 
 const PaymentOptions = () => {
-  const [showUpiPayment, setShowUpiPayment] = useState(false);
-  const [showDebitOrCredit, setShowDebitOrCredit] = useState(false);
-  const [showCashOnDelivery, setShowCashOnDelivery] = useState(false);
+  const [activeTab, setActiveTab] = useState("upi");
 
-  const handleUpiPaymentClick = () => {
-    setShowUpiPayment(true); 
-    setShowDebitOrCredit(false);
-    setShowCashOnDelivery(false);
-  };
-
-  const handleDebitOrCreditClick = () => {
-    setShowUpiPayment(false);
-    setShowDebitOrCredit(true);
-    setShowCashOnDelivery(false);
-  };
-
-  const handleCashOnDeliveryClick = () => {
-    setShowUpiPayment(false);
-    setShowDebitOrCredit(false);
-    setShowCashOnDelivery(true);
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
   };
 
   return (
@@ -34,35 +18,47 @@ const PaymentOptions = () => {
       <h2>PAYMENT OPTIONS</h2>
       <div className="paymentOptionsContainerTabMain">
         <div className="cartPaymentTabButtons">
-          <button className="paymentOptionsButtons" onClick={handleUpiPaymentClick}>
+          <button
+            style={{ cursor: "pointer", backgroundColor: activeTab === "upi" ? "lightgreen" : "" }}
+            className={activeTab === "upi" ? "paymentOptionsButtons active" : "paymentOptionsButtons"}
+            onClick={() => handleTabClick("upi")}
+          >
             <MdQrCodeScanner style={{ marginRight: "12px" }} />
-            UPI Payments 
+            UPI Payments
           </button>
 
-          <button style={{ marginTop: "10px" }} className="paymentOptionsButtons" onClick={handleDebitOrCreditClick}>
-            <IoMdCard style={{ marginRight: "12px" }}/>
+          <button
+            style={{ cursor: "pointer", marginTop: "10px", backgroundColor: activeTab === "card" ? "lightgreen" : "" }}
+            className={activeTab === "card" ? "paymentOptionsButtons active" : "paymentOptionsButtons"}
+            onClick={() => handleTabClick("card")}
+          >
+            <IoMdCard style={{ marginRight: "12px" }} />
             Debit or Credit
           </button>
 
-          <button style={{ marginTop: "10px" }} className="paymentOptionsButtons" onClick={handleCashOnDeliveryClick}>
-            <TbTruckDelivery style={{ marginRight: "12px" }}/>
-            Cash on Delivery 
+          <button
+            style={{ cursor: "pointer", marginTop: "10px", backgroundColor: activeTab === "cod" ? "lightgreen" : "" }}
+            className={activeTab === "cod" ? "paymentOptionsButtons active" : "paymentOptionsButtons"}
+            onClick={() => handleTabClick("cod")}
+          >
+            <TbTruckDelivery style={{ marginRight: "12px" }} />
+            Cash on Delivery
           </button>
         </div>
-        <div>
-          <div className={showUpiPayment ? "upiPayment visible" : "upiPayment"}>
+        <div className="paymentMethodContainerMain">
+          <div className={activeTab === "upi" ? "tabContent active" : "tabContent"}>
             Upi Payment
           </div>
-          <div className={showDebitOrCredit ? "debitOrCredit visible" : "debitOrCredit"}>
+          <div className={activeTab === "card" ? "tabContent active" : "tabContent"}>
             Debit or Credit
           </div>
-          <div className={showCashOnDelivery ? "cashOnDelivery visible" : "cashOnDelivery"}>
+          <div className={activeTab === "cod" ? "tabContent active" : "tabContent"}>
             Cash on Delivery
           </div>
         </div>
       </div>
-    
-      <CartBill/>
+
+      <CartBill />
 
       <Link to={`/success/`}>
         <button className="payNowBtn"> Pay Now </button>
