@@ -33,11 +33,6 @@ const LoginOtpComp = (props) => {
     <div>
       <div>
         <h4>Login with OTP</h4>
-
-        {/* <div class="prompt" style={{marginTop:"8px"}}>
-                Enter the code generated on your mobile device below to log in!
-            </div> */}
-
             <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
                 <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
                 <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
