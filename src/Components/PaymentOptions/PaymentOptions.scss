@@ -8,6 +8,28 @@
     margin-bottom: 128px;
     // background-color: #f0f0f0;
 
+
+    .paymentOptionsContainerTabMain{
+
+      .cartPaymentTabButtons{
+        display: flex;
+        flex-direction: column;
+
+        .paymentOptionsButtons{
+          padding: 20px;
+          background-color: rgb(228, 228, 228);
+          border: none;
+
+          font-size: large;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      display: flex;
+    }
+
+
     .payNowBtn{
         width: 100%;
         padding: 15px;
